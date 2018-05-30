@@ -130,6 +130,15 @@ public class ventana extends JPanel {
                 texfield3.setText(calculadora.getFactory("convertor").getConvertor("binario").convertir(texfield1.getText()));  
             }
         });
+        
+        btnDec.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed (ActionEvent e){
+                
+                calculadora = new FactoryProducerOperacionesCalculadora();
+                texfield3.setText(calculadora.getFactory("convertor").getConvertor("decimal").convertir(texfield1.getText()));  
+            }
+        });
     }
         
 }
